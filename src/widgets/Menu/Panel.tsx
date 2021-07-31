@@ -26,6 +26,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   z-index: 11;
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
   transform: translate3d(0, 0, 0);
+  border-right: 1px solid rgba(224, 224, 224, .12);
 
   ${({ theme }) => theme.mediaQueries.nav} {
     width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
