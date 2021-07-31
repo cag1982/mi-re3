@@ -2921,10 +2921,10 @@ var baseColors = {
 var brandColors = {
     binance: "#F0B90B",
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#121212", backgroundDisabled: "rgba(255, 255, 255, .38)", contrast: "rgba(224, 224, 224, .12)", invertedContrast: "#FFFFFF", input: "rgba(224, 224, 224, .12)", tertiary: "rgba(224, 224, 224, .08)", text: "rgba(255, 255, 255, .87)", textDisabled: "rgba(255, 255, 255, .38)", textSubtle: "rgba(255, 255, 255, .60)", borderColor: "rgba(224, 224, 224, .12)", card: "#121212", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#121212", backgroundDisabled: "rgba(255, 255, 255, .38)", contrast: "rgba(224, 224, 224, .12)", invertedContrast: "#FFFFFF", input: "rgba(224, 224, 224, .12)", tertiary: "rgba(224, 224, 224, .08)", text: "rgba(255, 255, 255, .87)", textDisabled: "rgba(255, 255, 255, .38)", textSubtle: "rgba(255, 255, 255, .60)", borderColor: "rgba(224, 224, 224, .12)", card: "#272727", gradients: {
         bubblegum: "linear-gradient(139.73deg, #272727 0%, #353535 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#121212", backgroundDisabled: "rgba(255, 255, 255, .38)", contrast: "rgba(224, 224, 224, .12)", invertedContrast: "#FFFFFF", input: "rgba(224, 224, 224, .12)", tertiary: "rgba(224, 224, 224, .08)", text: "rgba(255, 255, 255, .87)", textDisabled: "rgba(255, 255, 255, .38)", textSubtle: "rgba(255, 255, 255, .60)", borderColor: "rgba(224, 224, 224, .12)", card: "#121212", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#121212", backgroundDisabled: "rgba(255, 255, 255, .38)", contrast: "rgba(224, 224, 224, .12)", invertedContrast: "#FFFFFF", input: "rgba(224, 224, 224, .12)", tertiary: "rgba(224, 224, 224, .08)", text: "rgba(255, 255, 255, .87)", textDisabled: "rgba(255, 255, 255, .38)", textSubtle: "rgba(255, 255, 255, .60)", borderColor: "rgba(224, 224, 224, .12)", card: "#272727", gradients: {
         bubblegum: "linear-gradient(139.73deg, #272727 0%, #353535 100%)",
     } });
 
@@ -3060,11 +3060,11 @@ var dark$4 = {
 };
 
 var light$5 = {
-    background: lightColors.card,
+    background: lightColors.background,
     hover: "#EEEAF4",
 };
 var dark$5 = {
-    background: darkColors.card,
+    background: darkColors.background,
     hover: "#473d5d",
 };
 
