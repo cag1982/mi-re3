@@ -32,3 +32,4 @@ export { default as FeaturesIcon } from "./Features";
 export { default as AnalyticsIcon } from "./Analytics";
 export { default as MediumIcon } from "./Medium";
 export { default as ListingIcon } from "./Listing";
+export { default as PredictionIcon } from "./Prediction";

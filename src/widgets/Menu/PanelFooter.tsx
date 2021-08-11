@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
 import Text from "../../components/Text/Text";
@@ -58,6 +58,44 @@ const SocialEntry = styled.div`
   padding: 0 16px;
 `;
 
+// const MusicBox = () => {
+//   const [isPlaying, setIsPlaying] = useState(false);
+
+
+//   const handlePlay = (evt) => {
+//     evt.preventDefault();
+
+//     const song = document.getElementById('song');
+
+//     if (song.paused) {
+//       song.play();
+//     } else {
+//       song.pause();
+//     }
+//   }
+
+//   const play = () => {
+//     setIsPlaying(true)
+//   }
+
+//   const pause = () => {
+//     setIsPlaying(false)
+//   };
+
+//   return (
+//     <PriceBox>
+//       <audio id="song" autoplay loop onPlay={play} onPause={pause}>
+//         <source src="/media/sandman.mp3" />
+//         Your browser does not support the
+//         <code>audio</code> element.
+//       </audio>
+//       <Link href="#" color={isPlaying ? 'text' : 'textSubtle'} onClick={handlePlay}>
+//         <svg width="32" height="32" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" /></svg>
+//       </Link>
+//     </PriceBox>
+//   )
+// }
+
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
@@ -81,16 +119,19 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      <PriceBox>
-        {cakePriceUsd ? (
-          <PriceLink href={priceLink} target="_blank">
-            <PancakeRoundIcon width="24px" mr="8px" />
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24} />
-        )}
-      </PriceBox>
+      {/* <Flex alignItems="center" justifyContent="space-between"> */}
+        <PriceBox>
+          {cakePriceUsd ? (
+            <PriceLink href={priceLink} target="_blank">
+              <PancakeRoundIcon width="24px" mr="8px" />
+              <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+            </PriceLink>
+          ) : (
+            <Skeleton width={80} height={24} />
+          )}
+        </PriceBox>
+        {/* <MusicBox /> */}
+      {/* </Flex> */}
       <SocialEntry>
         {socials.map((social, index) => {
           const Icon = Icons[social.icon];
