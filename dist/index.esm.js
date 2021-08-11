@@ -2292,22 +2292,22 @@ var socials = [
     {
         label: "Github",
         icon: "GithubIcon",
-        href: "https://github.com/dojofarm",
+        href: "https://github.com/SandmanFarmio",
     },
     {
         label: "Docs",
         icon: "DocsIcon",
-        href: "https://docs.dojofarm.finance",
+        href: "https://docs.sandman.farm",
     },
     {
         label: "Medium",
         icon: "MediumIcon",
-        href: "https://medium.com/@DojoFarmFinance",
+        href: "https://sandmanfarm.medium.com/",
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/dojofarmfinance",
+        href: "https://twitter.com/FarmSandman",
     },
     {
         label: "Telegram",
@@ -2315,19 +2315,19 @@ var socials = [
         items: [
             {
                 label: "Official",
-                href: "https://t.me/DojoFarm",
+                href: "https://t.me/SandManFarm",
             },
-            {
-                label: "Spanish",
-                href: "https://t.me/DojoFarmSpanish",
-            },
-            {
-                label: "Price Discussion",
-                href: "https://t.me/DojoFarmPrice",
-            },
+            //   {
+            //     label: "Spanish",
+            //     href: "https://t.me/DojoFarmSpanish",
+            //   },
+            //   {
+            //     label: "Price Discussion",
+            //     href: "https://t.me/DojoFarmPrice",
+            //   },
             {
                 label: "Announcements",
-                href: "https://t.me/DojoFarmAnnoun",
+                href: "https://t.me/SandManFarmAnn",
             },
         ],
     },
