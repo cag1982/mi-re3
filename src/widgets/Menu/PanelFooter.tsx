@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect, useRef } from 'react'
+import styled, { keyframes } from "styled-components";
 import { PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
@@ -58,43 +58,84 @@ const SocialEntry = styled.div`
   padding: 0 16px;
 `;
 
-// const MusicBox = () => {
-//   const [isPlaying, setIsPlaying] = useState(false);
+const MusicIcon = styled.a`
+  color: #FFF;
+`
 
+const anim = keyframes`
+  0% {
+    transform:scale(1);
+  }
+  10% {
+    transform:scale(1.125);
+  }
+  20% {
+    transform:scale(1);
+  }
+  30% {
+    transform:scale(1.125);
+  }
+  40% {
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.125);
+  }
+  60% {
+    transform:scale(1);
+  }
+  70% {
+    transform:scale(1.125);
+  }
+  80% {
+    transform:scale(1);
+  }
+  90% {
+    transform:scale(1.125);
+  }
+`
 
-//   const handlePlay = (evt) => {
-//     evt.preventDefault();
+const MusicIconPlaying = styled.a`
+  animation-name: ${anim};
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  color: #6200EE;
+`
 
-//     const song = document.getElementById('song');
+const AudioPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(true)
 
-//     if (song.paused) {
-//       song.play();
-//     } else {
-//       song.pause();
-//     }
-//   }
+  const audioRef = useRef(new Audio('/media/sandman.mp3'))
+  // audioRef.current.autoplay = true
+  audioRef.current.loop = true
 
-//   const play = () => {
-//     setIsPlaying(true)
-//   }
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play()
+    } else {
+      audioRef.current.pause()
+    }
+  }, [isPlaying])
 
-//   const pause = () => {
-//     setIsPlaying(false)
-//   };
-
-//   return (
-//     <PriceBox>
-//       <audio id="song" autoplay loop onPlay={play} onPause={pause}>
-//         <source src="/media/sandman.mp3" />
-//         Your browser does not support the
-//         <code>audio</code> element.
-//       </audio>
-//       <Link href="#" color={isPlaying ? 'text' : 'textSubtle'} onClick={handlePlay}>
-//         <svg width="32" height="32" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" /></svg>
-//       </Link>
-//     </PriceBox>
-//   )
-// }
+  return (
+    <PriceBox>
+      {isPlaying ? (
+        <MusicIconPlaying key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
+          <svg width="32" height="32" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
+          </svg>
+        </MusicIconPlaying>
+      ) : (
+        <MusicIcon key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
+          <svg width="32" height="32" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
+          </svg>
+        </MusicIcon>
+      )}
+    </PriceBox>
+  )
+}
 
 const PanelFooter: React.FC<Props> = ({
   isPushed,
@@ -119,7 +160,7 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      {/* <Flex alignItems="center" justifyContent="space-between"> */}
+      <Flex alignItems="center" justifyContent="space-between">
         <PriceBox>
           {cakePriceUsd ? (
             <PriceLink href={priceLink} target="_blank">
@@ -130,8 +171,8 @@ const PanelFooter: React.FC<Props> = ({
             <Skeleton width={80} height={24} />
           )}
         </PriceBox>
-        {/* <MusicBox /> */}
-      {/* </Flex> */}
+        <AudioPlayer />
+      </Flex>
       <SocialEntry>
         {socials.map((social, index) => {
           const Icon = Icons[social.icon];

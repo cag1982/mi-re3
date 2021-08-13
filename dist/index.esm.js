@@ -2551,36 +2551,28 @@ var PriceLink = styled.a(templateObject_3$7 || (templateObject_3$7 = __makeTempl
 //   padding: 0 8px;
 // `;
 var SocialEntry = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
-// const MusicBox = () => {
-//   const [isPlaying, setIsPlaying] = useState(false);
-//   const handlePlay = (evt) => {
-//     evt.preventDefault();
-//     const song = document.getElementById('song');
-//     if (song.paused) {
-//       song.play();
-//     } else {
-//       song.pause();
-//     }
-//   }
-//   const play = () => {
-//     setIsPlaying(true)
-//   }
-//   const pause = () => {
-//     setIsPlaying(false)
-//   };
-//   return (
-//     <PriceBox>
-//       <audio id="song" autoplay loop onPlay={play} onPause={pause}>
-//         <source src="/media/sandman.mp3" />
-//         Your browser does not support the
-//         <code>audio</code> element.
-//       </audio>
-//       <Link href="#" color={isPlaying ? 'text' : 'textSubtle'} onClick={handlePlay}>
-//         <svg width="32" height="32" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" /></svg>
-//       </Link>
-//     </PriceBox>
-//   )
-// }
+var MusicIcon = styled.a(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  color: #FFF;\n"], ["\n  color: #FFF;\n"])));
+var anim = keyframes(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  0% {\n    transform:scale(1);\n  }\n  10% {\n    transform:scale(1.125);\n  }\n  20% {\n    transform:scale(1);\n  }\n  30% {\n    transform:scale(1.125);\n  }\n  40% {\n    transform:scale(1);\n  }\n  50% {\n    transform:scale(1.125);\n  }\n  60% {\n    transform:scale(1);\n  }\n  70% {\n    transform:scale(1.125);\n  }\n  80% {\n    transform:scale(1);\n  }\n  90% {\n    transform:scale(1.125);\n  }\n"], ["\n  0% {\n    transform:scale(1);\n  }\n  10% {\n    transform:scale(1.125);\n  }\n  20% {\n    transform:scale(1);\n  }\n  30% {\n    transform:scale(1.125);\n  }\n  40% {\n    transform:scale(1);\n  }\n  50% {\n    transform:scale(1.125);\n  }\n  60% {\n    transform:scale(1);\n  }\n  70% {\n    transform:scale(1.125);\n  }\n  80% {\n    transform:scale(1);\n  }\n  90% {\n    transform:scale(1.125);\n  }\n"])));
+var MusicIconPlaying = styled.a(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #6200EE;\n"], ["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #6200EE;\n"])), anim);
+var AudioPlayer = function () {
+    var _a = useState(true), isPlaying = _a[0], setIsPlaying = _a[1];
+    var audioRef = useRef(new Audio('/media/sandman.mp3'));
+    // audioRef.current.autoplay = true
+    audioRef.current.loop = true;
+    useEffect(function () {
+        if (isPlaying) {
+            audioRef.current.play();
+        }
+        else {
+            audioRef.current.pause();
+        }
+    }, [isPlaying]);
+    return (React.createElement(PriceBox, null, isPlaying ? (React.createElement(MusicIconPlaying, { key: "music", href: "#", role: "button", onClick: function (evt) { evt.preventDefault(); setIsPlaying(!isPlaying); } },
+        React.createElement("svg", { width: "32", height: "32", "aria-hidden": "true", focusable: "false", "data-icon": "music", role: "img", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" },
+            React.createElement("path", { fill: "currentColor", d: "M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" })))) : (React.createElement(MusicIcon, { key: "music", href: "#", role: "button", onClick: function (evt) { evt.preventDefault(); setIsPlaying(!isPlaying); } },
+        React.createElement("svg", { width: "32", height: "32", "aria-hidden": "true", focusable: "false", "data-icon": "music", role: "img", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" },
+            React.createElement("path", { fill: "currentColor", d: "M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" }))))));
+};
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd; _a.currentLang; _a.langs; _a.setLang; var priceLink = _a.priceLink;
     if (!isPushed) {
@@ -2589,9 +2581,11 @@ var PanelFooter = function (_a) {
                 React.createElement(Icon$l, null))));
     }
     return (React.createElement(Container$4, null,
-        React.createElement(PriceBox, null, cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
-            React.createElement(Icon$v, { width: "24px", mr: "8px" }),
-            React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
+        React.createElement(Flex, { alignItems: "center", justifyContent: "space-between" },
+            React.createElement(PriceBox, null, cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
+                React.createElement(Icon$v, { width: "24px", mr: "8px" }),
+                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
+            React.createElement(AudioPlayer, null)),
         React.createElement(SocialEntry, null, socials.map(function (social, index) {
             var Icon = Icons$1[social.icon];
             var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
@@ -2603,7 +2597,7 @@ var PanelFooter = function (_a) {
                 React.createElement(Icon, __assign({}, iconProps))));
         }))));
 };
-var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2;
+var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2, templateObject_5$1, templateObject_6, templateObject_7;
 
 var StyledPanel = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  border-right: 1px solid rgba(224, 224, 224, .12);\n\n  ", " {\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  border-right: 1px solid rgba(224, 224, 224, .12);\n\n  ", " {\n    width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
@@ -2889,11 +2883,11 @@ var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplat
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
-var MobileOnlyOverlay = styled(Overlay)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
+var MobileOnlyOverlay = styled(Overlay)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-styled.span(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  display: none;\n\n  ", " {\n    display: inline;\n    margin-right: 6px;\n  }\n"], ["\n  display: none;\n\n  ", " {\n    display: inline;\n    margin-right: 6px;\n  }\n"])), function (_a) {
+styled.span(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  display: none;\n\n  ", " {\n    display: inline;\n    margin-right: 6px;\n  }\n"], ["\n  display: none;\n\n  ", " {\n    display: inline;\n    margin-right: 6px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.lg;
 });
@@ -2946,7 +2940,7 @@ var Menu = function (_a) {
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$H, templateObject_2$g, templateObject_3$8, templateObject_4$3, templateObject_5$1, templateObject_6;
+var templateObject_1$H, templateObject_2$g, templateObject_3$8, templateObject_4$3, templateObject_5$2, templateObject_6$1;
 
 var ToastAction = function (_a) {
     var action = _a.action;
