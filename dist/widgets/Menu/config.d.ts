@@ -2,6 +2,10 @@ export declare const links: ({
     label: string;
     icon: string;
     href: string;
+    tag: {
+        title: string;
+        variant: string;
+    };
     items?: undefined;
     calloutClass?: undefined;
 } | {
@@ -12,6 +16,14 @@ export declare const links: ({
         href: string;
     }[];
     href?: undefined;
+    tag?: undefined;
+    calloutClass?: undefined;
+} | {
+    label: string;
+    icon: string;
+    href: string;
+    tag?: undefined;
+    items?: undefined;
     calloutClass?: undefined;
 } | {
     label: string;
@@ -22,6 +34,7 @@ export declare const links: ({
     }[];
     calloutClass: string;
     href?: undefined;
+    tag?: undefined;
 })[];
 export declare const socials: ({
     label: string;

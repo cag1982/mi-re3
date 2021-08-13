@@ -1,4 +1,5 @@
 import { Login } from "../WalletModal/types";
+import { TagVariants } from '../../components/Tag';
 export interface LangType {
     code: string;
     language: string;
@@ -23,6 +24,10 @@ export interface MenuSubEntry {
     href: string;
     calloutClass?: string;
 }
+export interface MenuEntryTag {
+    title: string;
+    variant: TagVariants;
+}
 export interface MenuEntry {
     label: string;
     icon: string;
@@ -30,6 +35,7 @@ export interface MenuEntry {
     href?: string;
     calloutClass?: string;
     initialOpenState?: boolean;
+    tag?: MenuEntryTag;
 }
 export interface PanelProps {
     isDark: boolean;

@@ -2271,9 +2271,13 @@ var templateObject_1$y;
 
 var links = [
     {
-        label: "Home",
-        icon: "HomeIcon",
+        label: "Vaults",
+        icon: "VaultsIcon",
         href: "/",
+        tag: {
+            title: 'auto-compound',
+            variant: 'primary'
+        },
     },
     {
         label: "Trade",
@@ -2526,7 +2530,10 @@ var PanelBody = function (_a) {
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
             React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
                 iconElement,
-                React.createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
+                React.createElement(LinkLabel, { isPushed: isPushed },
+                    entry.label,
+                    " ",
+                    entry.tag ? (React.createElement(Tag, { style: { fontSize: '12px', padding: '0 4px', lineHeight: '1', height: '20px', borderSize: '1px', marginLeft: '4px' }, outline: true, variant: entry.tag.variant }, entry.tag.title)) : null))));
     })));
 };
 var templateObject_1$B;

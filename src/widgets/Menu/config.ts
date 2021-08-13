@@ -1,8 +1,12 @@
 export const links = [
   {
-    label: "Home",
-    icon: "HomeIcon",
+    label: "Vaults",
+    icon: "VaultsIcon",
     href: "/",
+    tag: {
+      title: 'auto-compound',
+      variant: 'primary'
+    },
   },
   {
     label: "Trade",
