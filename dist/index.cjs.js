@@ -2631,13 +2631,14 @@ var StyledPanel = styled__default['default'].div(templateObject_1$D || (template
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
-var StyledRugDoc = styled__default['default'].a(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  padding: 16px;\n\n  img {\n    width: 100%;\n  }\n"], ["\n  padding: 16px;\n\n  img {\n    width: 100%;\n  }\n"])));
+var StyledRugDoc = styled__default['default'].a(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  padding: 16px 16px 0;\n  position: relative;\n\n  img {\n    width: 100%;\n  }\n\n  span {\n    position: absolute;\n    top: 8px;\n    right: 6px;\n    font-size: 10px;\n    padding: 4px 8px;\n    border: 1px solid #FFB74D;\n    border-radius: 6px;\n    color: #fff;\n    text-shadow:\n      0 0 7px #fff,\n      0 0 10px #fff,\n      0 0 21px #fff,\n      0 0 42px #0fa,\n      0 0 82px #0fa,\n      0 0 92px #0fa,\n      0 0 102px #0fa,\n      0 0 151px #0fa;\n  }\n"], ["\n  padding: 16px 16px 0;\n  position: relative;\n\n  img {\n    width: 100%;\n  }\n\n  span {\n    position: absolute;\n    top: 8px;\n    right: 6px;\n    font-size: 10px;\n    padding: 4px 8px;\n    border: 1px solid #FFB74D;\n    border-radius: 6px;\n    color: #fff;\n    text-shadow:\n      0 0 7px #fff,\n      0 0 10px #fff,\n      0 0 21px #fff,\n      0 0 42px #0fa,\n      0 0 82px #0fa,\n      0 0 92px #0fa,\n      0 0 102px #0fa,\n      0 0 151px #0fa;\n  }\n"])));
 var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu, rugDocLink = props.rugDocLink;
     return (React__default['default'].createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React__default['default'].createElement(PanelBody, __assign({}, props)),
         rugDocLink ? (React__default['default'].createElement(StyledRugDoc, { href: rugDocLink },
-            React__default['default'].createElement("img", { src: "/images/rugdoc-review-badge-with-glow.png" }))) : null,
+            React__default['default'].createElement("span", null, "KYC / LOW RISK"),
+            React__default['default'].createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }))) : null,
         React__default['default'].createElement(PanelFooter, __assign({}, props))));
 };
 var templateObject_1$D, templateObject_2$d;
@@ -2880,6 +2881,8 @@ var Avatar = function (_a) {
 };
 var templateObject_1$G, templateObject_2$f;
 
+var Icons$2 = IconModule;
+var FeaturesIcon = Icons$2.FeaturesIcon;
 var Wrapper$1 = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
 var StyledNav = styled__default['default'].nav(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: #272727;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: #272727;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);\n"])), function (_a) {
     var showMenu = _a.showMenu;
@@ -2904,9 +2907,10 @@ styled__default['default'].span(templateObject_6$1 || (templateObject_6$1 = __ma
     var theme = _a.theme;
     return theme.mediaQueries.lg;
 });
+var PaladinTag = styled__default['default'](Tag)(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  border-color: #FFB74D;\n  color: #fff;\n  text-shadow:\n    0 0 7px #fff,\n    0 0 10px #fff,\n    0 0 21px #fff,\n    0 0 42px #0fa,\n    0 0 82px #0fa,\n    0 0 92px #0fa,\n    0 0 102px #0fa,\n    0 0 151px #0fa;\n\n  svg {\n    fill: #FFB74D;\n  }\n"], ["\n  border-color: #FFB74D;\n  color: #fff;\n  text-shadow:\n    0 0 7px #fff,\n    0 0 10px #fff,\n    0 0 21px #fff,\n    0 0 42px #0fa,\n    0 0 82px #0fa,\n    0 0 92px #0fa,\n    0 0 102px #0fa,\n    0 0 151px #0fa;\n\n  svg {\n    fill: #FFB74D;\n  }\n"])));
 var Menu = function (_a) {
     var _b;
-    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, priceLink = _a.priceLink, profile = _a.profile, rugDocLink = _a.rugDocLink, children = _a.children;
+    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, priceLink = _a.priceLink, profile = _a.profile, rugDocLink = _a.rugDocLink; _a.paladinLink; var children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var _c = React.useState(!isMobile), isPushed = _c[0], setIsPushed = _c[1];
@@ -2945,7 +2949,9 @@ var Menu = function (_a) {
     return (React__default['default'].createElement(Wrapper$1, null,
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-            React__default['default'].createElement(Flex, null,
+            React__default['default'].createElement(Flex, { alignItems: "center" },
+                React__default['default'].createElement("a", { href: '#', style: { marginRight: '6px' } },
+                    React__default['default'].createElement(PaladinTag, { startIcon: React__default['default'].createElement(FeaturesIcon, null), outline: true }, "PALADIN AUDITED")),
                 React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React__default['default'].createElement(Avatar, { profile: profile }))),
         React__default['default'].createElement(BodyWrapper, null,
@@ -2953,7 +2959,7 @@ var Menu = function (_a) {
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$H, templateObject_2$g, templateObject_3$8, templateObject_4$3, templateObject_5$2, templateObject_6$1;
+var templateObject_1$H, templateObject_2$g, templateObject_3$8, templateObject_4$3, templateObject_5$2, templateObject_6$1, templateObject_7$1;
 
 var ToastAction = function (_a) {
     var action = _a.action;

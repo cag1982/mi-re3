@@ -34,10 +34,31 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const StyledRugDoc = styled.a`
-  padding: 16px;
+  padding: 16px 16px 0;
+  position: relative;
 
   img {
     width: 100%;
+  }
+
+  span {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    font-size: 10px;
+    padding: 4px 8px;
+    border: 1px solid #FFB74D;
+    border-radius: 6px;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
   }
 `
 
@@ -48,7 +69,8 @@ const Panel: React.FC<Props> = (props) => {
       <PanelBody {...props} />
       {rugDocLink ? (
         <StyledRugDoc href={rugDocLink}>
-          <img src="/images/rugdoc-review-badge-with-glow.png" />
+          <span>KYC / LOW RISK</span>
+          <img src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" />
         </StyledRugDoc>
       ) : null}
       <PanelFooter {...props} />
