@@ -2910,7 +2910,7 @@ styled__default['default'].span(templateObject_6$1 || (templateObject_6$1 = __ma
 var PaladinTag = styled__default['default'](Tag)(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  border-color: #FFB74D;\n  color: #fff;\n  text-shadow:\n    0 0 7px #fff,\n    0 0 10px #fff,\n    0 0 21px #fff,\n    0 0 42px #0fa,\n    0 0 82px #0fa,\n    0 0 92px #0fa,\n    0 0 102px #0fa,\n    0 0 151px #0fa;\n\n  svg {\n    fill: #FFB74D;\n  }\n"], ["\n  border-color: #FFB74D;\n  color: #fff;\n  text-shadow:\n    0 0 7px #fff,\n    0 0 10px #fff,\n    0 0 21px #fff,\n    0 0 42px #0fa,\n    0 0 82px #0fa,\n    0 0 92px #0fa,\n    0 0 102px #0fa,\n    0 0 151px #0fa;\n\n  svg {\n    fill: #FFB74D;\n  }\n"])));
 var Menu = function (_a) {
     var _b;
-    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, priceLink = _a.priceLink, profile = _a.profile, rugDocLink = _a.rugDocLink, paladinLink = _a.paladinLink, children = _a.children;
+    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, priceLink = _a.priceLink, profile = _a.profile, rugDocLink = _a.rugDocLink, paladinLink = _a.paladinLink, paladinText = _a.paladinText, children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var _c = React.useState(!isMobile), isPushed = _c[0], setIsPushed = _c[1];
@@ -2951,7 +2951,7 @@ var Menu = function (_a) {
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default['default'].createElement(Flex, { alignItems: "center" },
                 paladinLink ? (React__default['default'].createElement("a", { href: paladinLink, style: { marginRight: '6px' } },
-                    React__default['default'].createElement(PaladinTag, { startIcon: React__default['default'].createElement(FeaturesIcon, null), outline: true }, "PALADIN AUDITED"))) : null,
+                    React__default['default'].createElement(PaladinTag, { startIcon: React__default['default'].createElement(FeaturesIcon, null), outline: true }, paladinText))) : null,
                 React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React__default['default'].createElement(Avatar, { profile: profile }))),
         React__default['default'].createElement(BodyWrapper, null,

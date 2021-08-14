@@ -106,6 +106,7 @@ const Menu: React.FC<NavProps> = ({
   profile,
   rugDocLink,
   paladinLink,
+  paladinText,
   children,
 }) => {
   const { isXl } = useMatchBreakpoints();
@@ -158,7 +159,7 @@ const Menu: React.FC<NavProps> = ({
         <Flex alignItems="center">
           {paladinLink ? (
             <a href={paladinLink} style={{ marginRight: '6px' }}>
-              <PaladinTag startIcon={<FeaturesIcon />} outline>PALADIN AUDITED</PaladinTag>
+              <PaladinTag startIcon={<FeaturesIcon />} outline>{paladinText}</PaladinTag>
             </a>
           ) : null}
           <UserBlock account={account} login={login} logout={logout} />
