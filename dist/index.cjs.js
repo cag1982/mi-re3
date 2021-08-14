@@ -2566,11 +2566,11 @@ var PriceLink = styled__default['default'].a(templateObject_3$7 || (templateObje
 var SocialEntry = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 var MusicIcon = styled__default['default'].a(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  color: #FFF;\n"], ["\n  color: #FFF;\n"])));
 var anim = styled.keyframes(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  0% {\n    transform:scale(1);\n  }\n  10% {\n    transform:scale(1.125);\n  }\n  20% {\n    transform:scale(1);\n  }\n  30% {\n    transform:scale(1.125);\n  }\n  40% {\n    transform:scale(1);\n  }\n  50% {\n    transform:scale(1.125);\n  }\n  60% {\n    transform:scale(1);\n  }\n  70% {\n    transform:scale(1.125);\n  }\n  80% {\n    transform:scale(1);\n  }\n  90% {\n    transform:scale(1.125);\n  }\n"], ["\n  0% {\n    transform:scale(1);\n  }\n  10% {\n    transform:scale(1.125);\n  }\n  20% {\n    transform:scale(1);\n  }\n  30% {\n    transform:scale(1.125);\n  }\n  40% {\n    transform:scale(1);\n  }\n  50% {\n    transform:scale(1.125);\n  }\n  60% {\n    transform:scale(1);\n  }\n  70% {\n    transform:scale(1.125);\n  }\n  80% {\n    transform:scale(1);\n  }\n  90% {\n    transform:scale(1.125);\n  }\n"])));
-var MusicIconPlaying = styled__default['default'].a(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #6200EE;\n"], ["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #6200EE;\n"])), anim);
+var MusicIconPlaying = styled__default['default'].a(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #00ABE0;\n"], ["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #00ABE0;\n"])), anim);
 var AudioPlayer = function () {
-    var _a = React.useState(true), isPlaying = _a[0], setIsPlaying = _a[1];
+    var _a = React.useState(false), isPlaying = _a[0], setIsPlaying = _a[1];
     var audioRef = React.useRef(new Audio('/media/sandman.mp3'));
-    // audioRef.current.autoplay = true
+    // audioRef.current.autoplay = true OPTIONAL
     audioRef.current.loop = true;
     React.useEffect(function () {
         if (isPlaying) {

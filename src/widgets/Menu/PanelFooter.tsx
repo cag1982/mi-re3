@@ -100,14 +100,14 @@ const MusicIconPlaying = styled.a`
   animation-duration: 5s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
-  color: #6200EE;
+  color: #00ABE0;
 `
 
 const AudioPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(false)
 
   const audioRef = useRef(new Audio('/media/sandman.mp3'))
-  // audioRef.current.autoplay = true
+  // audioRef.current.autoplay = true OPTIONAL
   audioRef.current.loop = true
 
   useEffect(() => {
