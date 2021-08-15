@@ -2636,7 +2636,7 @@ var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu, rugDocLink = props.rugDocLink;
     return (React__default['default'].createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React__default['default'].createElement(PanelBody, __assign({}, props)),
-        rugDocLink ? (React__default['default'].createElement(StyledRugDoc, { href: rugDocLink },
+        rugDocLink ? (React__default['default'].createElement(StyledRugDoc, { href: rugDocLink, target: "_blank", rel: "noreferrer" },
             React__default['default'].createElement("span", null, "KYC / LOW RISK"),
             React__default['default'].createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }))) : null,
         React__default['default'].createElement(PanelFooter, __assign({}, props))));
@@ -2950,7 +2950,7 @@ var Menu = function (_a) {
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default['default'].createElement(Flex, { alignItems: "center" },
-                paladinLink ? (React__default['default'].createElement("a", { href: paladinLink, style: { marginRight: '6px' } },
+                paladinLink ? (React__default['default'].createElement("a", { href: paladinLink, target: "_blank", rel: "noreferrer", style: { marginRight: '6px' } },
                     React__default['default'].createElement(PaladinTag, { startIcon: React__default['default'].createElement(FeaturesIcon, null), outline: true }, paladinText))) : null,
                 React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React__default['default'].createElement(Avatar, { profile: profile }))),

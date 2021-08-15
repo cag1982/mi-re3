@@ -2623,7 +2623,7 @@ var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu, rugDocLink = props.rugDocLink;
     return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React.createElement(PanelBody, __assign({}, props)),
-        rugDocLink ? (React.createElement(StyledRugDoc, { href: rugDocLink },
+        rugDocLink ? (React.createElement(StyledRugDoc, { href: rugDocLink, target: "_blank", rel: "noreferrer" },
             React.createElement("span", null, "KYC / LOW RISK"),
             React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }))) : null,
         React.createElement(PanelFooter, __assign({}, props))));
@@ -2937,7 +2937,7 @@ var Menu = function (_a) {
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, { alignItems: "center" },
-                paladinLink ? (React.createElement("a", { href: paladinLink, style: { marginRight: '6px' } },
+                paladinLink ? (React.createElement("a", { href: paladinLink, target: "_blank", rel: "noreferrer", style: { marginRight: '6px' } },
                     React.createElement(PaladinTag, { startIcon: React.createElement(FeaturesIcon, null), outline: true }, paladinText))) : null,
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React.createElement(Avatar, { profile: profile }))),

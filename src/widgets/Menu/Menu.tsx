@@ -158,7 +158,7 @@ const Menu: React.FC<NavProps> = ({
         />
         <Flex alignItems="center">
           {paladinLink ? (
-            <a href={paladinLink} style={{ marginRight: '6px' }}>
+            <a href={paladinLink} target="_blank" rel="noreferrer" style={{ marginRight: '6px' }}>
               <PaladinTag startIcon={<FeaturesIcon />} outline>{paladinText}</PaladinTag>
             </a>
           ) : null}
