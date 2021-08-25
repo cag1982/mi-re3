@@ -103,39 +103,39 @@ const MusicIconPlaying = styled.a`
   color: #00ABE0;
 `
 
-// const AudioPlayer = () => {
-//   const [isPlaying, setIsPlaying] = useState(false)
+const AudioPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(false)
 
-//   const audioRef = useRef(new Audio('/media/sandman.mp3'))
-//   // audioRef.current.autoplay = true OPTIONAL
-//   audioRef.current.loop = true
+  const audioRef = useRef(new Audio('/media/sandman.mp3'))
+  // audioRef.current.autoplay = true OPTIONAL
+  audioRef.current.loop = true
 
-//   useEffect(() => {
-//     if (isPlaying) {
-//       audioRef.current.play()
-//     } else {
-//       audioRef.current.pause()
-//     }
-//   }, [isPlaying])
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play()
+    } else {
+      audioRef.current.pause()
+    }
+  }, [isPlaying])
 
-//   return (
-//     <PriceBox>
-//       {isPlaying ? (
-//         <MusicIconPlaying key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
-//           <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-//             <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
-//           </svg>
-//         </MusicIconPlaying>
-//       ) : (
-//         <MusicIcon key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
-//           <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-//             <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
-//           </svg>
-//         </MusicIcon>
-//       )}
-//     </PriceBox>
-//   )
-// }
+  return (
+    <PriceBox>
+      {isPlaying ? (
+        <MusicIconPlaying key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
+          <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
+          </svg>
+        </MusicIconPlaying>
+      ) : (
+        <MusicIcon key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
+          <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
+          </svg>
+        </MusicIcon>
+      )}
+    </PriceBox>
+  )
+}
 
 const PanelFooter: React.FC<Props> = ({
   isPushed,
@@ -171,7 +171,7 @@ const PanelFooter: React.FC<Props> = ({
             <Skeleton width={80} height={24} />
           )}
         </PriceBox>
-        {/* <AudioPlayer /> */}
+        <AudioPlayer />
       </Flex>
       <SocialEntry>
         {socials.map((social, index) => {

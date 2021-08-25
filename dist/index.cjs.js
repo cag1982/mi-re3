@@ -2564,70 +2564,28 @@ var PriceLink = styled__default['default'].a(templateObject_3$7 || (templateObje
 //   padding: 0 8px;
 // `;
 var SocialEntry = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
-styled__default['default'].a(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  color: rgba(255, 255, 255, .60);\n"], ["\n  color: rgba(255, 255, 255, .60);\n"])));
+var MusicIcon = styled__default['default'].a(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  color: rgba(255, 255, 255, .60);\n"], ["\n  color: rgba(255, 255, 255, .60);\n"])));
 var anim = styled.keyframes(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  0% {\n    transform:scale(1);\n  }\n  10% {\n    transform:scale(1.125);\n  }\n  20% {\n    transform:scale(1);\n  }\n  30% {\n    transform:scale(1.125);\n  }\n  40% {\n    transform:scale(1);\n  }\n  50% {\n    transform:scale(1.125);\n  }\n  60% {\n    transform:scale(1);\n  }\n  70% {\n    transform:scale(1.125);\n  }\n  80% {\n    transform:scale(1);\n  }\n  90% {\n    transform:scale(1.125);\n  }\n"], ["\n  0% {\n    transform:scale(1);\n  }\n  10% {\n    transform:scale(1.125);\n  }\n  20% {\n    transform:scale(1);\n  }\n  30% {\n    transform:scale(1.125);\n  }\n  40% {\n    transform:scale(1);\n  }\n  50% {\n    transform:scale(1.125);\n  }\n  60% {\n    transform:scale(1);\n  }\n  70% {\n    transform:scale(1.125);\n  }\n  80% {\n    transform:scale(1);\n  }\n  90% {\n    transform:scale(1.125);\n  }\n"])));
-styled__default['default'].a(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #00ABE0;\n"], ["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #00ABE0;\n"
-    // const AudioPlayer = () => {
-    //   const [isPlaying, setIsPlaying] = useState(false)
-    //   const audioRef = useRef(new Audio('/media/sandman.mp3'))
-    //   // audioRef.current.autoplay = true OPTIONAL
-    //   audioRef.current.loop = true
-    //   useEffect(() => {
-    //     if (isPlaying) {
-    //       audioRef.current.play()
-    //     } else {
-    //       audioRef.current.pause()
-    //     }
-    //   }, [isPlaying])
-    //   return (
-    //     <PriceBox>
-    //       {isPlaying ? (
-    //         <MusicIconPlaying key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
-    //           <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    //             <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
-    //           </svg>
-    //         </MusicIconPlaying>
-    //       ) : (
-    //         <MusicIcon key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
-    //           <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    //             <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
-    //           </svg>
-    //         </MusicIcon>
-    //       )}
-    //     </PriceBox>
-    //   )
-    // }
-])), anim);
-// const AudioPlayer = () => {
-//   const [isPlaying, setIsPlaying] = useState(false)
-//   const audioRef = useRef(new Audio('/media/sandman.mp3'))
-//   // audioRef.current.autoplay = true OPTIONAL
-//   audioRef.current.loop = true
-//   useEffect(() => {
-//     if (isPlaying) {
-//       audioRef.current.play()
-//     } else {
-//       audioRef.current.pause()
-//     }
-//   }, [isPlaying])
-//   return (
-//     <PriceBox>
-//       {isPlaying ? (
-//         <MusicIconPlaying key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
-//           <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-//             <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
-//           </svg>
-//         </MusicIconPlaying>
-//       ) : (
-//         <MusicIcon key="music" href="#" role="button" onClick={(evt) => { evt.preventDefault(); setIsPlaying(!isPlaying); }}>
-//           <svg width="24" height="24" aria-hidden="true" focusable="false" data-icon="music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-//             <path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
-//           </svg>
-//         </MusicIcon>
-//       )}
-//     </PriceBox>
-//   )
-// }
+var MusicIconPlaying = styled__default['default'].a(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #00ABE0;\n"], ["\n  animation-name: ", ";\n  animation-duration: 5s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  color: #00ABE0;\n"])), anim);
+var AudioPlayer = function () {
+    var _a = React.useState(false), isPlaying = _a[0], setIsPlaying = _a[1];
+    var audioRef = React.useRef(new Audio('/media/sandman.mp3'));
+    // audioRef.current.autoplay = true OPTIONAL
+    audioRef.current.loop = true;
+    React.useEffect(function () {
+        if (isPlaying) {
+            audioRef.current.play();
+        }
+        else {
+            audioRef.current.pause();
+        }
+    }, [isPlaying]);
+    return (React__default['default'].createElement(PriceBox, null, isPlaying ? (React__default['default'].createElement(MusicIconPlaying, { key: "music", href: "#", role: "button", onClick: function (evt) { evt.preventDefault(); setIsPlaying(!isPlaying); } },
+        React__default['default'].createElement("svg", { width: "24", height: "24", "aria-hidden": "true", focusable: "false", "data-icon": "music", role: "img", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" },
+            React__default['default'].createElement("path", { fill: "currentColor", d: "M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" })))) : (React__default['default'].createElement(MusicIcon, { key: "music", href: "#", role: "button", onClick: function (evt) { evt.preventDefault(); setIsPlaying(!isPlaying); } },
+        React__default['default'].createElement("svg", { width: "24", height: "24", "aria-hidden": "true", focusable: "false", "data-icon": "music", role: "img", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" },
+            React__default['default'].createElement("path", { fill: "currentColor", d: "M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" }))))));
+};
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd; _a.currentLang; _a.langs; _a.setLang; var priceLink = _a.priceLink;
     if (!isPushed) {
@@ -2639,7 +2597,8 @@ var PanelFooter = function (_a) {
         React__default['default'].createElement(Flex, { alignItems: "center", justifyContent: "space-between" },
             React__default['default'].createElement(PriceBox, null, cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React__default['default'].createElement(Icon$v, { width: "24px", mr: "8px" }),
-                React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 })))),
+                React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }))),
+            React__default['default'].createElement(AudioPlayer, null)),
         React__default['default'].createElement(SocialEntry, null, socials.map(function (social, index) {
             var Icon = Icons$1[social.icon];
             var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
