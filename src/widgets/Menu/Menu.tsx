@@ -105,6 +105,7 @@ const Menu: React.FC<NavProps> = ({
   priceLink,
   profile,
   rugDocLink,
+  defiYieldLink,
   paladinLink,
   paladinText,
   children,
@@ -181,6 +182,7 @@ const Menu: React.FC<NavProps> = ({
           links={links}
           priceLink={priceLink}
           rugDocLink={rugDocLink}
+          defiYieldLink={defiYieldLink}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
