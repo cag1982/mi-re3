@@ -65,7 +65,7 @@ const StyledRugDoc = styled.a`
 const StyledDefiYield = styled.a`
   padding: 4px 8px 0;
   margin: 0 12px 12px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
   border-radius: 6px;
   svg {
     width: 100%;
