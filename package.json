@@ -1,14 +1,14 @@
 {
   "name": "@pancakeswap-libs/uikit",
   "version": "0.10.2",
-  "description": "Set of UI components for pancake projects by dojoteam",
+  "description": "Set of UI components for pancake projects by sandmanio",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/dojoteam/sandman-uikit",
+  "repository": "https://github.com/sandmanio/sandman-uikit",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
