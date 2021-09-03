@@ -2391,7 +2391,7 @@ var socials = [
     {
         label: "Github",
         icon: "GithubIcon",
-        href: "https://github.com/SandmanFarmio",
+        href: "https://github.com/sandmanfinance",
     },
     {
         label: "Docs",
@@ -2401,12 +2401,12 @@ var socials = [
     {
         label: "Medium",
         icon: "MediumIcon",
-        href: "https://sandmanfarm.medium.com/",
+        href: "https://sandmanfinance.medium.com/",
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/sandmanfarm",
+        href: "https://twitter.com/sandman_finance",
     },
     {
         label: "Telegram",
@@ -2414,7 +2414,7 @@ var socials = [
         items: [
             {
                 label: "Official",
-                href: "https://t.me/SandManFarm",
+                href: "https://t.me/SandMan_Finance",
             },
             //   {
             //     label: "Spanish",
